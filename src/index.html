@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Open+Sans&family=Rubik:ital,wght@0,300;0,400;0,500;1,500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Cake</title>
 </head>
 <body>
-  <header class="header">
+  <header id="up" class="header">
     <div class="container">
       <div class="header_wrapper">
         <nav class="menu">
           <ul class="menu_list">
             <li class="menu_item">
-              <a href="#" class="menu_link">Меню</a>
+              <a href="#price" class="menu_link">Меню</a>
             </li>
             <li class="menu_item">
               <a href="#" class="menu_link">Где нас искать</a>
@@ -25,36 +27,44 @@
               <a href="#" class="menu_link">Контакты</a>
             </li>
             <li class="menu_item">
-              <a href="#" class="menu_link">О нас</a>
+              <a href="#about" class="menu_link">О нас</a>
             </li>
           </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
-        <div class="menu_logo"> 
-          <a href="">
-            <img src="img/logo.svg" alt="Cake" class="logo_img">
-          </a>
-        </div>
-        <div class="menu_nav">
-          <a href="tel:+380000000000" class="menu_phone">+380-00-000-00-00</a>
-          <a href="" class="menu_location">ул.Довженко,55</a>
-        </div>
-     </div>
+          <div class="menu_logo"> 
+            <a href="#">
+              <img src="img/logo.svg" alt="Cake" class="logo_img">
+            </a>
+          </div>
+            <div class="menu_nav">
+              <a href="tel:+380000000000" class="menu_phone">+380-00-000-00-00</a>
+              <a href="#" class="menu_location">ул.Довженко,55</a>
+            </div> 
+      </div> 
     </div>
   </header>
   <section class="promo">
+    
     <div class="container">
+      <div class="promo_content">
       <h1 class="promo_header">Неповторимый вкус</h1>
         <h2 class="promo_subheader">Аромат кофе , вкусные сладости, уют и хорошее настроение
           <br>всегда ждут вас в нашей кофейне</h2>
-          <button class="promo_btn">Подробнее</button>
+            <button class="promo_btn">Подробнее</button>
     </div>
+  </div>
   </section>
-    <section class="make">
+   <section class="make">
       <div class="container">
         <div class="make_border">
           <div class="make_descr">
-            <h1 class="make_title title">Создаем кофе
-              <br>с любовью для вас</h1>
+            <div class="make_title title">Cоздаем кофе
+              <br>с любовью для вас</div>
             <h2 class="make_subheader subheader">Мы кофейня Cake, наша команда работает для того чтобы вы могли наслаждаться лучшими сортами кофе со всего мира.
               <p>Мы используем такие сорта кофе как: арабика, который является самым важным видом кофе в мире – отличается сложным ароматом; робуста – второй по популярности вид кофе в мире.</p>
               <p>Оставить нашего клиента довольным и счастливым - наша главная задача:)</p></h2>
@@ -65,25 +75,30 @@
     </section>
     <section class="email">
       <div class="container">
-        <div class="email_item">
+        <div class="email_items">
+        <div  class="email_item">
           <div class="email_descr">
-            <h1 class="email_title title">Следи за нами</h1>
+            <div class="email_title title">Следи за нами</div>
             <h2 class="email_subheader subheader">Получи свой бесплатный кофе просто подписавшись на наши обьявления и акции.
             <p> Акция распространяется на все позиции в нашем меню.</p></h2>
+            </div>
+            <div class="email_wrapper"> 
+              <form id="email-form" class="email_form" action="#">
+                <input name ="email" required placeholder="Ваш e-mail" type="email">
+                <button class="email_btn">Подписаться</button>
+              </form>    
+            </div>
+          </div>  
           </div>
-            <form class="email_follow"action="#">
-              <input name="email" required placeholder="Ваш e-mail" type="email">
-              <button class="email_btn">Подписаться</button>
-            </form>        
         </div>
-      </div>
     </section>
-    <section class="about">
+
+    <section class="about" id="about">
       <div class="container">
-        <h1 class="about_title title">Что говорят о нас</h1>
-        <div class="about_items">
-          <div class="about_item ">
-            <img src="../src/img/photo1.png" alt="" class="about_img">
+        <div class="about_title title">Что говорят о нас</div>
+        <div class="about_items"> 
+          <div class="about_item animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="0.3s" >
+            <img src="img/photo1.png" alt="" class="about_img">
             <div class="about_descr">
               <div class="about_name">Екатерина/Архитектор</div>
               <h5 class="about_special">Лучший кофе, всегда покупаю его 
@@ -93,16 +108,16 @@
             </div>
           </div>
       
-          <div class="about_item ">
-            <img src="../src/img/photo2.png" alt="" class="about_img">
+          <div class="about_item animate__animated animate__fadeInRight wow" data-wow-duration="2s" data-wow-delay="0.4s">
+            <img src="img/photo2.png" alt="" class="about_img">
             <div class="about_descr">
               <div class="about_name">Марина/Дизайнер</div>
               <h5 class="about_special">Всегда приветливое и профессиональное 
                 обслуживание. Ваше какао просто бомба!</h5>
             </div>
           </div>
-          <div class="about_item ">
-            <img src="../src/img/photo3.png" alt="" class="about_img">
+          <div class="about_item animate__animated animate__fadeInRight wow" data-wow-duration="3s" data-wow-delay="0.4s">
+            <img src="img/photo3.png" alt="" class="about_img">
             <div class="about_descr">
               <div class="about_name">Михаил/Программист</div>
               <h5 class="about_special">Я безумно люблю кофе, поэтому всегда выбираю самое лучшее.
@@ -113,7 +128,7 @@
         <div class="about_bottom">Мы создаем шедевры</div>
       </div>
     </section>
-    <section class="price">
+    <section class="price" id="price">
       <div class="container">
         <div class="price_items">
           <div class="price_item">
@@ -145,11 +160,50 @@
             <h4 class="price_view">Капучино</h4>
             <h4 class="price_money">25$</h4>
           </div>
-
-
-          
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_title title">Где нас искать</div>
+        <div class="footer_wrapper">
+          <div class="footer_info">
+            <a href="#" class="footer_location">ул.Довженко,55</a>
+            <div class="footer_graphic">Без выходных с 8:00 до 20:00</div>
+            <a href="tel:380000000000" class="footer_phone">+38(000)000-00-00</a>
+          </div>
+          <div id="footer_map"></div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="overlay">
+      <div class="modal">
+        <div class="modal_close">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="modal_check">
+            <img src="icons/mark.svg" alt="check">
+        </div>
+          <div class="modal_thanks">Спасибо!</div>
+            <div class="modal_descr">Подписка успешно оформлена</div>
+      </div>
+    </div>
+  
+  <a href="#up" class="pageup">
+    <img src="icons/arrowup.svg" alt="up">
+  </a>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwpvgivUrf7zJM1U1Xx-8xbwKo02jUYes=initMap" async defer>
+    </script> -->
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

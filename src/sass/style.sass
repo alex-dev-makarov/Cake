@@ -1,283 +1,37 @@
-$main-color: #C7954B
-
-=btn_hover
-	&:hover
-		background-color: #DDBF93
-=btn_active	
-	&:active
-		background-color:	#9F773C
 
 *
 	box-sizing: border-box
-
+	margin: 0
 html 	
-	font-family: Open Sans,sans-serif
+	font-family: Open Sans, sans-serif
 	
 h1,h2,h3,h4,h5 
 	margin: 0
+
+@import "variables"
+@import "mixins"
+@import "general"
+@import "pageup"
+@import "media"
+
+
+
 	
-.title
-	font-family: Rubik
-	font-weight: 400
-	color: #ffffff
-.subheader
-	margin: 0 
-	font-weight: 400
-	font-size: 18px
-	line-height: 25px
-	color: #FFFFFF
 
-.container
-	max-width: 1300px
-	margin: 0 auto
-	padding: 0 10px
 
-.header
-	height: 90px
-	background-color: #171516
-	padding: 32px 0
-	display: flex
-	align-items: center
-	&_wrapper
-		display: flex
-.menu
-	&_list
-		display: flex	
-		padding: 0
-		list-style-type: none
-	&_item
-		padding-right: 60px
-		&:last-child
-			padding-right: 0
-	&_link
-		font-size: 18px
-		font-weight: 400
-		color: #ffffff
-		text-decoration: none
-		padding-bottom: 2px
-		transition: 0.4s all
-		&:hover
-			color: $main-color
+
+		
+
 			
-	&_logo
-		display: block
-		margin: auto 234px auto 112px
-	&_nav
-		display: flex
-		align-items: center
-	&_phone
-		margin-right: 84px
-		position: relative
-		font-size: 16px
-		color: #ffffff
-		text-decoration: none
-		&::before
-			content: ""
-			position: absolute
-			top: -1px
-			left: -27px
-			height: 24px
-			width: 24px
-			background: url("../icons/phone.svg")
-	&_location
-		position: relative
-		font-size: 16px
-		color: #ffffff
-		text-decoration: none
-		&::before
-			content: ""
-			position: absolute
-			top: -1px
-			left: -27px
-			height: 24px
-			width: 24px
-			background: url("../icons/location.svg")
-.promo
-	min-height: 792px
-	background: url('../img/bg/promo.jpg') center center/cover no-repeat
-	padding: 256px 0 
-	&_header
-		margin: 0 auto
-		font-family: Rubik
-		font-weight: 400
-		font-size: 72px
-		text-align: center
-		color: #ffffff
-	&_subheader
-		margin: 0 auto
-		margin-top: 40px
-		font-weight: 400
-		font-size: 18px
-		line-height: 25px
-		text-align: center
-		color: #FFFFFF
-	&_btn
-		display: block
-		margin: 0 auto
-		margin-top: 40px
-		padding: 20px 62px
-		background-color: #C7954B
-		border: none
-		outline: none
-		transition: 0.5s all
-		cursor: pointer
-		font-size: 18px
-		text-align: center
-		color: #171516
-		+btn_hover
-		+btn_active
-.make
-	min-height: 710px
-	background-color: #171516
-	padding: 90px 0
-	&_border
-		display: flex
-		align-items: center
-		border: 1px solid #FFFFFF
-		padding: 60px 110px
-	&_descr
-		width: 639px
-		margin-right: 20px
-	&_title
-		margin: 0 auto
-		margin-bottom: 20px
-		font-size: 50px
-	&_img
-	 	height: 409px
-.email
-	min-height: 470px
-	background: url('../img/bg/email.jpg') center center/cover no-repeat
-	padding: 90px 0
-	&_item
-		display: block
-		position: relative
-		float: right
-	&_descr
-		max-width: 750px
-	&_title
-		font-size: 50px
-	&_subheader
-		margin-top: 40px
-	&_follow
-		position: relative
-		display: flex
-		align-items: center
-		margin-top: 60px
-		outline: none
-		width: 521px
-		border: 2px solid #ffffff
-		border-right: none
-		z-index: 0
-		input
-			background-color: transparent
-			border: none
-			outline: none
-			padding: 20px 20px
-			font-weight: 400
-			font-size: 18px
-			color: #FFFFFF
-			
-	&_btn
-		position: absolute
-		right: -226px
-		padding: 20px 55px
-		background-color: #C7954B 
-		border: 2px solid #ffffff
-		outline: none
-		transition: 0.5s all
-		cursor: pointer
-		font-size: 18px
-		text-align: center
-		color: #171516
-		+btn_hover
-		+btn_active
-.about
-	min-height: 214px
-	background-color: #171516
-	padding: 90px 0 60px 0
-	&_title
-		margin: 0 auto
-		text-align: center
-		font-size: 64px
-	&_items
-		display: flex
-		justify-content: space-between
-		margin: 0 auto
-		margin-top: 60px
-	&_item
-		width: 420px
-		border: 1px solid #ffffff
-		padding: 30px 0 65px 0
-	&_img
-		display: block
-		margin: 0 auto
-		transition: 0.5s all
-		&:hover
-			transform: scale(1.1)
-	&_descr
-		margin: 0 auto
-		margin-top: 30px
-		max-width: 390px
-		text-align: center
-	&_name
-		font-size: 24px
-		line-height: 28px
-		color: #C7954B
-	&_special
-		margin: 0
-		margin-top: 10px
-		font-size: 18px
-		font-weight: 400
-		line-height: 26px
-		color: #ffffff
-	&_bottom
-		margin: 0 
-		margin-top: 90px
-		font-family: Rubik
-		font-size: 64px
-		font-weight: 400
-		text-align: center
-		color: #ffffff
-.price
-	min-height: 660px
-	background: url('../img/bg/price.jpg') center center/cover no-repeat
-	padding: 90px 0
-	&_items
-		max-width: 530px
-	&_item
-		display: flex
-		position: relative
-		margin-top: 40px
-		padding-bottom: 7px
-		border-bottom: 3px solid #ffffff
-		&:first-child
-			margin-top: 0
-	&_view
-		margin: 0
-		font-family: Rubik
-		font-weight: 400
-		font-size: 36px
-		color: #FFFFFF
-	&_money
-		position: absolute
-		margin: 0
-		right: 0
-		font-family: Rubik
-		font-style: italic
-		font-weight: 500
-		font-size: 36px
-		color: #FFFFFF
-
-		
 
 
 		
 		
+
+
 
 	
 	
-		
-		
 
 				
 

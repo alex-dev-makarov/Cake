@@ -1,0 +1,137 @@
+@media (max-width:1199px) 
+    .menu
+        &_link 
+            font-size: 16px
+
+        &_logo 
+            transform: none
+
+        &_phone,
+        &_location 
+            font-size: 15px
+        
+        &_nav 
+            justify-content: space-around
+
+
+@media (max-width:991px) 
+    .menu
+        &_item 
+            padding-right: 40px  
+    .make
+        &_border
+            padding: 60px 35px
+        &_img
+            height: 322px    
+@media (max-width: 920px )
+    .menu
+        &_list
+            position: fixed
+            flex-direction: column
+            align-items: center
+            top: -200%
+            right: 0
+            width: 100%
+            min-height: 100vh
+            padding: 32px 0
+            background-color: rgba(0,0, 0, .8 )
+            transition: 0.7s all
+            z-index: 1
+            &_active
+                top: 88px
+        &_nav
+            flex-direction: column
+            width: 130px
+            justify-content: space-around
+            align-items: flex-start
+            width: 130px
+            height: 60px
+            position: relative
+            
+        &_item
+            padding-right: 0
+            padding-bottom: 60px
+            &:last-child
+                padding-bottom: 0
+        &_link
+            font-size: 25px
+            padding-top: 8px
+            
+        &_logo
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+    .email
+        padding: 100px 0
+        
+    .hamburger
+        display: block
+        position: absolute
+        left: 10px
+        top: 50%
+        transform: translateY(-50%)
+        width: 26px
+        height: 24px
+        z-index: 2
+        span
+            display: block
+            height: 3px
+            width: 100%
+            background-color: #fff
+            margin-bottom: 5px
+            transition: 0.5s all
+        &_active
+            span
+                margin-bottom: -3px
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(3px)  rotate(45deg)
+
+@media( max-width: 880px )
+    .make
+        &_title 
+            font-size: 35px
+    .subheader
+            font-size: 16px
+@media( max-width: 740px )
+    .make
+        &_img
+            height: 272px
+@media( max-width: 610px )
+    .promo
+        padding: 190px 0
+        &_header
+            font-size: 53px
+        &_subheader
+            margin-top: 40px
+            font-size: 17px
+        &_btn
+            margin-top: 65px
+    .make
+        &_img
+            display: none
+
+@media (max-width: 450px)
+    .menu
+        &_nav
+            display: none
+        &_link
+            font-size: 16px
+    .promo
+        &_header
+            font-size: 38px
+        &_subheader
+            margin-top: 33px
+            font-size: 16px
+       
+    
+                    
+
+    
+            
+        
+
+    
